@@ -1,0 +1,36 @@
+
+<html>
+
+    
+    <form action="" method="POST">
+    Name: <input type = "text" name = "ten" value=""> <br>
+    noidung: <input type = "text" name = "nd" value="">
+    <button type="submit", id= send>Send </button><br>
+    
+    <head>
+    <script src="jquery.js"></script>
+    
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        //
+        var socket = io("http://localhost:3000");
+
+        socket.on("server-send-data",function(data){
+            $("#noidung").append(data+", ");
+        });
+        $(document).ready(function(){
+            $("#send").click(function(){
+                // alert(1);
+                
+                var nd = $data
+                socket.emit("client-send-data", nd);
+            });
+        });
+    </script>
+    </head>
+    
+    <body>
+            <div id="mra">Click send</div>
+            <h2 id="noidung"></h2>
+    </body>
+</html>

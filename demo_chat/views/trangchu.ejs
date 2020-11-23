@@ -1,0 +1,42 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title> trang chu</title>
+        <script src="jquery.js"></script>
+
+        <script src="/socket.io/socket.io.js"></script>
+
+        <script src="xuly.js"></script>
+        <link rel="stylesheet" type="text/css" href="layout.css"/>
+    
+    
+    </head>
+    
+    <body>
+
+        <div id="main">
+            <div id="loginForm"> <!-- //trang login -->
+                name: <input type="text" id="pname"/>
+                <input type="button" value= "Register" id= "Register">
+            </div>
+
+            <div id="chatForm"> 
+                <div id="left">
+                    <div id="boxtitle">USER OLINE</div>
+                    <div id="boxcontent">...</div>
+                </div>
+                <div id="right">
+                    <div id="sayHi">Hello <span id="currentuser"> A</span> 
+                        <input type="button" id="logout" value="logout">
+                    </div>
+                    <div id="listmessenges">
+                    </div>
+                    <input type = "text" id = "messenger" value =""/>
+                    <input type="button" id="sendmessenger" value="send" />
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

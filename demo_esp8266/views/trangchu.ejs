@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+     <html lang='en'>
+     <head>
+         <meta charset='utf-8'>
+         <title>demo esp8266</title>
+         <meta name='viewport' content='width=device-width,initial-scale=1'/>
+         <!-- <script src="jquery.js"></script> -->
+         <script src="/socket.io/socket.io.js"></script>
+         <script src="xuly.js"></script>
+     </head>
+     <body>
+     <form method="post" action="" enctype="multipart/form-data">
+        <input type = "file" name ="avatar"/>
+        <input type ="button" name ="uploadclick" value="upload" id = "btn"/>
+    </form>
+     <?php
+     if(isset($_POST['uploadclick']))
+    {
+        move_uploaded_file($_FILES['avatar']['tmp_name'], './save/'.$_FILES['avatar']['name']);
+    }
+
+     ?>
+     <form method='POST' action='' enctype='multipart/form-data'>
+         FileSystem:<br>
+         <input type='file' accept='.bin,.bin.gz' name='filesystem'>
+         <input type='submit' value='Update FileSystem'>
+     </form>
+     </body>
+     </html>

@@ -1,0 +1,8 @@
+body{background-color: while} /*mau nen*/
+/*#main{width: 100% margin: auto; border: 2px black}		/*bo cuc*/
+/*#pname{background-color: transparent;border: solid 1px black}    /*cai dat khung*/
+/*#left{width: 30%; height: 10%;float: left;background-color: #f0f2d0} /*khung ben trai*/
+/*#right{width: 70%;height: 10%; float: right; background-color: #d4f9f8}/*khung ben phai*/
+#table{height: 5%, width: 5%, border: 2px black}
+#inputForm{height: 5%}
+#outputForm{height: 15%}
